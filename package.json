@@ -15,7 +15,9 @@
     "node-jsx": "^0.12.4",
     "react": "^0.12.2",
     "react-document-title": "^0.1.3",
-    "react-router": "^0.11.6"
+    "react-router": "^0.11.6",
+    "q": "^1.1.2",
+    "superagent": "^0.21.0"
   },
   "devDependencies": {
     "browserify": "^8.0.1",
@@ -26,6 +28,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/gulp js --silent",
     "dev": "nodemon --watch ./node_modules/app --watch ./ -e .js,.jsx ./bin/www",
     "start": "node ./bin/www"
   },
