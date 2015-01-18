@@ -1,5 +1,6 @@
 server/server
 node_modules/*
 !node_modules/app
+.sass-cache
 public/*
 .DS_Store

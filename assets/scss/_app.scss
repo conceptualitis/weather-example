@@ -1,0 +1,69 @@
+@import "compass";
+
+@mixin sky-gradient($top, $bottom) {
+    @include background-image(linear-gradient($top 55%, $bottom));
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.weather-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    ul, li {
+        display: inline;
+        list-style: none;
+    }
+
+    a {
+        display: inline-block;
+        padding: 1rem;
+    }
+}
+
+.forecast {
+    position: relative;
+    height: 100%;
+
+    .hour {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        color: #fff;
+        font-size: 4.375em;
+        text-align: center;
+
+        @include text-shadow(rgba(#13394d, 0.4) 0 5px 10px);
+        @include sky-gradient(#59acff, #bfdfff);
+
+        &.right {
+            left: 50%;
+        }
+
+        &.dawn {
+            @include sky-gradient(#93d3dc, #f2eccd);
+        }
+        &.sunset {
+            @include sky-gradient(#6396d9, #d88594);
+        }
+        &.night {
+            @include sky-gradient(#322957, #954354);
+        }
+    }
+
+    .temperature {
+        position: relative;
+        top: 50%;
+        display: block;
+        -webkit-transform: translateY(-60%);
+        -ms-transform: translateY(-60%);
+        transform: translateY(-60%);
+    }
+}
