@@ -40,15 +40,25 @@ body {
         }
     }
 
-    .ball a {
-        display: inline-block;
-        height: 100px;
-        width: 100px;
-        border-radius: 50px;
-        line-height: 90px;
+    .ball {
+        a {
+            display: inline-block;
+            height: 80px;
+            width: 100px;
+            padding-top: 20px;
+            border-radius: 50px;
+            font-size: 1.5rem;
 
-        @include background-image(radial-gradient(circle at 50px 35px, #ffe86b, #ffa800));
-        @include box-shadow(rgba(#fffaab, 0.75) 0 0 10px inset, rgba(#fffaab, 0.5) 0 0 25px);
+            @include text-shadow(rgba(#a9760c, 0.7) 0 2px 4px);
+            @include background-image(radial-gradient(circle at 50px 35px, #ffe86b, #ffa800));
+            @include box-shadow(rgba(#fffaab, 0.75) 0 0 10px inset, rgba(#fffaab, 0.5) 0 0 25px);
+        }
+
+        .day {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+        }
     }
 }
 
