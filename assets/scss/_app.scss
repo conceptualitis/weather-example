@@ -73,7 +73,6 @@ body {
         width: 50%;
         height: 100%;
         color: #fff;
-        font-size: 4.375em;
         text-align: center;
 
         @include text-shadow(rgba(#13394d, 0.4) 0 5px 10px);
@@ -94,7 +93,7 @@ body {
         }
     }
 
-    .temperature {
+    .summary {
         position: relative;
         top: 50%;
         display: block;
@@ -103,8 +102,29 @@ body {
         transform: translateY(-60%);
     }
 
+    .temperature {
+        display: block;
+        margin-top: 20px;
+        font-size: 4.375em;
+    }
+
+    .select-hour {
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    .icon-sunny:before {
+        font-family: "iconvault";
+        content: "\f113";
+    }
+
     .updateButton {
-        position: absolute;
-        left: 50%;
+          position: absolute;
+          left: 50%;
+          top: 150px;
+          width: 120px;
+          margin-left: -60px;
     }
 }
