@@ -5,7 +5,46 @@
 }
 
 body {
+    background-color: #333;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 960px;
+    padding: 5rem 0;
+    margin: 0 auto;
+}
+
+.site-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    z-index: 100;
+
+    ul, li {
+        list-style: none;
+        display: inline;
+    }
+
+    a {
+        display: inline-block;
+        padding: 1em;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .weather-nav {
