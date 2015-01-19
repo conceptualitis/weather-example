@@ -10,7 +10,7 @@ body {
 
 .weather-nav {
     position: absolute;
-    top: 30px;
+    top: 15%;
     left: 0;
     width: 100%;
     text-align: center;
@@ -97,9 +97,7 @@ body {
         position: relative;
         top: 50%;
         display: block;
-        -webkit-transform: translateY(-60%);
-        -ms-transform: translateY(-60%);
-        transform: translateY(-60%);
+        @include transform(translateY(-60%));
     }
 
     .temperature {
@@ -121,10 +119,13 @@ body {
     }
 
     .updateButton {
-          position: absolute;
-          left: 50%;
-          top: 150px;
-          width: 120px;
-          margin-left: -60px;
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        width: 120px;
+        margin: {
+            top: 120px;
+            left: -60px;
+        }
     }
 }
